@@ -62,10 +62,21 @@ header{
 .Promesses{
     margin-top: 64px;
 }
+#promessesContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .infoDroite{
-text-align: center;
-align-items: center;
-margin-bottom: 64px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 64px;
+    width: 435px;
+    border: thick double rgb(0, 121, 63);
+    /* rgb(255, 245, 232); */
+    border-radius: 5px;
+    
 }
 button{
     padding: 10px;
@@ -180,7 +191,4 @@ body{
     text-align: left;
     padding-left: 10px;
 
-}
-footer{
-*
 }
