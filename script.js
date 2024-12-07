@@ -21,15 +21,13 @@ fetch('https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.g
        infoDroite.className=("infoDroite")
        let accroche=document.createElement("p");
        accroche.textContent=data.texteAccroche;
+       accroche.className="accroche"
 
        let bouton=document.createElement("button");
        bouton.textContent=data.texteBouton;
 
 
 let Steve=Object.keys(data);
-let promesseClients=document.createElement("h2");
-
-promesseClients.textContent=Steve[3]+" :";
 
 // tout embriquer
 header.appendChild(h1);
@@ -37,22 +35,29 @@ header.appendChild(infosContainer);
 infosContainer.appendChild(infoGauche);
 infoGauche.appendChild(accroche);
 infoGauche.appendChild(bouton);
-infosContainer.appendChild(infoDroite);
-infoDroite.appendChild(promesseClients);
 
+// récupérer mon main
+let main=document.getElementById("main");
+// ma section bonus
+let promessesContainer=document.getElementById("promessesContainer");
+
+let promesseClients=document.createElement("h2");
+promesseClients.textContent= "Nos "+Steve[3]+" :";
+promesseClients.className="Promesses"
 // rajouter mes commentaires
 data.promessesClient.forEach(element => {
     let p=document.createElement("p");
     p.textContent=element;
     infoDroite.appendChild(p);
 });
+promessesContainer.appendChild(promesseClients);
+promessesContainer.appendChild(infoDroite);
 
-// récupérer mon main
-let main=document.getElementById("main");
+
 // ma première section
 let platsContainer=document.getElementById("platsContainer");
 let plats=document.createElement("h2");
-plats.textContent=Steve[4]+" :";
+plats.textContent= "Nos "+Steve[4]+" :";
 let grandeCarte=document.createElement("div");
 grandeCarte.className="grandeCarte"
 
@@ -82,7 +87,7 @@ grandeCarte.appendChild(platCarte);
 // troisième section
 let servicesContainer=document.getElementById("servicesContainer");
 let serviceType=document.createElement("h2");
-serviceType.textContent=Steve[5];
+serviceType.textContent= "Nos "+Steve[5]+" :";
 let serviceGrandeCarte=document.createElement("div");
 serviceGrandeCarte.className="serviceGrandeCarte"
 
@@ -105,7 +110,9 @@ data.services.forEach(element => {
 let footer=document.getElementById("footer");
 
 let avis=document.createElement("h2");
-avis.textContent=Steve[6]+" :";
+avis.textContent= "Nos "+ Steve[6]+" :";
+avis.className="avis"
+footer.appendChild(avis)
 
 data.temoignages.forEach(element => {
     let commentairesContainer=document.createElement("div")

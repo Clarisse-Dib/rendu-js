@@ -2,20 +2,24 @@
     display: flex;
     justify-content: end;
 }
-h1, h2, h3, h4{
+h1{
+    font-family: 'Spectral';
+    font-size: 4rem;
+    padding-top: 100px;
+}
+.accroche{
+    margin-top: 0px;
+    margin-bottom: 70px;
+}
+h2, h3, h4{
     font-family: 'Spectral';
 }
 
 h4{
     margin-top: 1px;
 }
-h1{
-    font-size: 4rem;
-    margin: 0;
-    padding-top: 100px;
-}
 h2{
-font-size: larger;
+font-size: 25px;
 }
 p, button{
 font-family: 'Abel';
@@ -55,14 +59,18 @@ header{
     display: flex;
     justify-content: space-between;
 }
+.Promesses{
+    margin-top: 64px;
+}
 .infoDroite{
-padding-top: 80px;
 text-align: center;
-justify-self: end;
+align-items: center;
+margin-bottom: 64px;
 }
 button{
     padding: 10px;
     margin: 15px;
+    margin-bottom: 145px;
     border-radius: 5px;
     border-width: 1px;
     border-color: rgb(0, 121, 63);
@@ -80,6 +88,7 @@ h2{
     text-align: center;
 }
 #servicesContainer{
+    margin-top: 64px;
     text-align: center;
     background-color: rgb(254, 242, 226);
     border-radius: 5px;
@@ -165,4 +174,13 @@ p{
 }
 body{
     color: rgb(27, 22, 16);
+}
+.avis{
+    margin-top: 64px;
+    text-align: left;
+    padding-left: 10px;
+
+}
+footer{
+*
 }
